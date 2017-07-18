@@ -1,0 +1,245 @@
+
+html, body { color: #434242; font-family: 'Open Sans', sans-serif !important; height: 100%; }
+body { font-size: 15px; line-height: 1.64; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
+h1,h4 { font-weight: 700; margin-bottom: 10px; }
+h2,h3 { font-weight: 300; color: #22A39F; }
+h2 { font-size: 54px; text-align: center; }
+h3 { font-size: 28px; }
+
+#navContainer.show {
+    top:0;
+}
+
+#background-grey {
+    background-color: #434242;
+}
+#contact h2{
+    color: white;
+}
+#contact a{
+    color: #4bb8d2;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#contact{
+    text-align: center;
+}
+#navContainer {
+    background-color: #22A39F;
+    position: fixed;
+    left: 0;
+    top: -80px;
+    right: 0;
+    z-index: 100;
+    
+    transition: top 1s;
+    -webkit-transition: top 1s;
+}
+#siteNav {
+    color:white;
+    z-index: 3;
+    margin-bottom: 0;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-pull-right {
+    float: right !important;
+}
+.navbar-nav li a {
+    line-height: 25px;
+} 
+
+.nav>li>a:focus, .nav>li>a:hover {
+   background-color: transparent;
+}
+
+.nav li a {
+    color:white;
+}
+#siteNav .navbar-brand{
+    color: white !important;
+    font-family: 'Bangers', cursive;
+    font-size: 33px;
+    text-shadow: 4px 4px 4px #aaa;
+    cursor: pointer;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 0px;
+    right: 5%;
+    height: 80px;
+    width: 110px;
+    background-color: #222222;
+    text-align: center;
+    z-index: 6;
+}
+.jumbotron .scroll-down .glyphicon {
+    color: #FFFFFF;
+    font-size: 30px;
+    padding-right: 2px;
+    padding-top: 20px;
+    animation-name: wiggle;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+#abilities ul > li .ability-title {
+    display: inline-block;
+    width: 60%;
+}
+
+.jumbotron .container > * {
+    color:white;
+    text-align: ccenter;
+}
+#abilities ul > li .ability-score {
+    float: right;
+}
+@keyframes wiggle {
+    0% {
+    padding-top: 20px;
+    }
+    50% {
+       padding-top: 30px;
+    }
+    100% {
+       padding-top: 20px;
+    }
+}
+body {
+    font-size: 15px;
+    line-height: 1.64;
+}
+#abilities ul > li:hover .ability-score .glyphicon { margin-left: 2px; } 
+.background-baishe {
+background: #F3EFE0 !important;
+}
+.jumbotron .overlay {
+    background-color: #22A39F;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    z-index: 2;
+}
+.jumbotron {
+	background: no-repeat center right fixed url("/mitch-rosen-bw.jpg");
+    position: relative !important; 
+	-webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+	margin-bottom: 0px;
+	padding: 0px;
+    overflow: hidden;
+}
+hr {
+    margin: 40px 0px;
+    border-color: #727878;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+p.lead {
+    text-align: center;
+    color: #727878;
+}
+h2 {
+    font-size: 54px;
+    text-align: center;
+}
+
+div > .container {
+    padding:40px 180px;
+}
+
+div[class^="col-"] {
+    transition: float 1s linear;
+}
+
+.jumbotron .container {
+    position: relative;
+    top: 22%;
+    z-index: 4;
+    text-align: center;
+}
+
+
+.jumbotron .container {
+    max-width: 100%;
+}
+
+
+@media only screen and (orientation: portrait) and (max-width: 767px)  {
+    .jumbotron {
+      -webkit-background-size: auto 150%;
+      background-attachment: scroll;
+    }
+}
+@media only screen and (orientation: landscape) and (max-width: 767px)  {
+
+    .jumbotron {
+      -webkit-background-size: 150% auto;
+      background-attachment: scroll;
+    }
+	
+	.jumbotron .lead { display: none; }
+}
+#experiences .experience {
+    margin-bottom: 20px;
+}
+
+.glyphicon.glyphicon-map-marker {
+color: #22A39F;
+}
+#experiences .experience .experience-details {
+    display: block;
+    margin-top: 6px;
+}
+ul.no-bullets {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.jumbotron .container h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    display: inline-block;
+}
+
+#abilities ul > li .ability-score .glyphicon.filled {
+    color: #22A39F;
+}
+#abilities ul > li:hover { background: #F2F2F2; }
+#abilities ul > li { min-height: 30px; padding: 3px 0px; }
+#abilities ul > li .ability-score .glyphicon {
+    color: #DFE0E0;
+    font-size: 14px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+@media (max-width: 767px) { 
+	.jumbotron:before {
+		bottom: 100px;
+		left: 20px;
+		right: 20px;
+		top: 20px;		
+	}
+	.jumbotron .container { top: 20%; padding-top: 0px; }
+	div > .container { padding: 60px 20px; min-width: 280px; }
+}  

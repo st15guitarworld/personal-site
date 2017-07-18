@@ -1,0 +1,26 @@
+{
+  "name": "steves-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "fbjs": "^0.8.11",
+    "npm": "^4.3.0",
+    "react": "15.4.2",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "15.4.2",
+    "react-parallax": "^1.2.6",
+    "react-scrollchor": "^2.2.0",
+    "react-scrollspy": "^2.6.4",
+    "react-sticky": "^5.0.5",
+    "react-waypoint": "^5.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
