@@ -33,7 +33,7 @@ h3 { font-size: 28px; }
     top: -80px;
     right: 0;
     z-index: 100;
-    
+
     transition: top 1s;
     -webkit-transition: top 1s;
 }
@@ -50,7 +50,7 @@ h3 { font-size: 28px; }
 }
 .navbar-nav li a {
     line-height: 25px;
-} 
+}
 
 .nav>li>a:focus, .nav>li>a:hover {
    background-color: transparent;
@@ -59,6 +59,10 @@ h3 { font-size: 28px; }
 .nav li a {
     color:white;
 }
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
 #siteNav .navbar-brand{
     color: white !important;
     font-family: 'Bangers', cursive;
@@ -66,6 +70,54 @@ h3 { font-size: 28px; }
     text-shadow: 4px 4px 4px #aaa;
     cursor: pointer;
 }
+.project-container {
+  height:250px;
+  position: relative;
+}
+.project-container:hover {
+  cursor: pointer;
+}
+.project-container:hover .project-overlay {
+  opacity: 0.7;
+}
+.project-container:hover .project-title,  .project-container:hover .project-description{
+  left: 0px;
+}
+ .project-overlay {
+  /* opacity: 0.5; */
+  opacity: 0;
+  transition: opacity 0.7s;
+  background-color: rgba(0,0,0,0.5);
+  position:absolute;
+  width: 100%;
+  bottom: 0px;
+  height: 100px;
+}
+.project-text-container {
+  position:absolute;
+  bottom:0%;
+  overflow: hidden;
+  width: 100%;
+  padding: 15px;
+}
+
+.project-text-container > .project-title, .project-text-container > .project-description{
+  position: relative;
+  transition: left 0.7s;
+  left:-100%;
+  color: white;
+  font-family:"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+ .project-title {
+   font-size: 18px;
+   line-height: 32px;
+   font-weight: 100;
+   margin-bottom: 5px;
+ }
+ .project-description {
+   font-weight: 80;
+   margin: 0;
+ }
 .scroll-down {
     position: absolute;
     bottom: 0px;
@@ -114,7 +166,7 @@ body {
     font-size: 15px;
     line-height: 1.64;
 }
-#abilities ul > li:hover .ability-score .glyphicon { margin-left: 2px; } 
+#abilities ul > li:hover .ability-score .glyphicon { margin-left: 2px; }
 .background-baishe {
 background: #F3EFE0 !important;
 }
@@ -131,17 +183,17 @@ background: #F3EFE0 !important;
 }
 .jumbotron {
 	background: no-repeat center right fixed url("/mitch-rosen-bw.jpg");
-    position: relative !important; 
-	-webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-	
+    position: relative !important;
+	-webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
+
 	margin-bottom: 0px;
 	padding: 0px;
     overflow: hidden;
@@ -194,7 +246,7 @@ div[class^="col-"] {
       -webkit-background-size: 150% auto;
       background-attachment: scroll;
     }
-	
+
 	.jumbotron .lead { display: none; }
 }
 #experiences .experience {
@@ -233,13 +285,13 @@ ul.no-bullets {
     transition: all 0.3s;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 	.jumbotron:before {
 		bottom: 100px;
 		left: 20px;
 		right: 20px;
-		top: 20px;		
+		top: 20px;
 	}
 	.jumbotron .container { top: 20%; padding-top: 0px; }
 	div > .container { padding: 60px 20px; min-width: 280px; }
-}  
+}

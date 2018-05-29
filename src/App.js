@@ -9,12 +9,12 @@ import './App.css';
 class ScrollDown extends Component  {
     constructor(props) {
     super(props);
-    } 
+    }
     render() {
         return (
             <Scrollchor to="#profile" className="scroll-down">
                 <span className="glyphicon glyphicon-chevron-down"></span>
-            </Scrollchor>        
+            </Scrollchor>
         );
     }
 }
@@ -22,7 +22,7 @@ class ScrollDown extends Component  {
 class MyNavBar extends Component {
     constructor(props) {
             super(props);
-            
+
     }
     render() {
         return (
@@ -42,15 +42,16 @@ class MyNavBar extends Component {
 					<li><Scrollchor to="#profile" className="nav-link">Profile</Scrollchor></li>
 					<li><Scrollchor to="#experiences" className="nav-link">Experiences</Scrollchor></li>
                     <li><Scrollchor to="#abilities" className="nav-link">Abilities</Scrollchor></li>
+                    <li><Scrollchor to="#projects" className="nav-link">Projects</Scrollchor></li>
                     <li><Scrollchor to="#contact" className="nav-link">Contact</Scrollchor></li>
-				
+
 				</Scrollspy>
             </div>
         </nav>
             </div>
         );
     }
-    
+
 }
 
 
@@ -63,15 +64,15 @@ class Top extends Component {
     }
     }
         this.getScreenHeight = this.getScreenHeight.bind(this);
-    } 
+    }
     componentDidMount() {
     window.addEventListener('resize',(event) => this.setState({
         style:{
-            height:this.getScreenHeight()   
+            height:this.getScreenHeight()
         }
     }));
     }
-    
+
     getScreenHeight() {
         var w=window,
         d=document,
@@ -80,15 +81,15 @@ class Top extends Component {
         y=w.innerHeight||e.clientHeight||g.clientHeight;
         return y;
     }
-    
-    render() { 
+
+    render() {
         return (
         <Jumbotron style={this.state.style}>
         <div className="overlay"></div>
         <Grid>
-            <h1>Steve Noel</h1>    
+            <h1>Steve Noel</h1>
             <p className="lead"> Personal Site</p>
-            
+
         </Grid>
             {this.props.children}
         </Jumbotron>
@@ -97,7 +98,7 @@ class Top extends Component {
 }
 
 class Profile extends Component {
-    render() { 
+    render() {
         return (
             <div className="profileSection">
                 <Grid id="profile">
@@ -123,7 +124,7 @@ class Profile extends Component {
                     Playing Guitar, Watching Movies<br />
                     <strong>Location:</strong><br />
                     Greater New York Area, NY, Earth
-                    
+
                     </p>
                     </Col>
                 </Row>
@@ -156,7 +157,7 @@ class Experiences extends Component {
                 <p>
 				<strong>Bachelor of Science - Computer Science</strong><br />
 				<span className="hidden-phone">
-					The software development courses were mostly Java and C based. However, I also learned the importance of 
+					The software development courses were mostly Java and C based. However, I also learned the importance of
                     Object Oriented Design Principles, web development and User experiece.</span>
 				<span className="experience-details">
 					<span className="location">
@@ -200,7 +201,7 @@ class Experiences extends Component {
             <p>
             <strong>Software Engineer Intern</strong>
             <span className="hidden-phone"><br />
-            Savannah River Naional Labs is focused on developing technologies to aid in the 
+            Savannah River Naional Labs is focused on developing technologies to aid in the
             nations legacy nuclear waste cleanup program. While there I helped design and develop an internal site for the management of research vehicles using Bootstrap and Jquery.
             </span>
             <span className="experience-details">
@@ -231,13 +232,13 @@ class Experiences extends Component {
                 </span>
                 </p>
                 </Col>
-        
+
             </Row>
-        
+
         </div>
           </div>
         </Grid>
-        
+
         </div>
     );
 }
@@ -253,7 +254,7 @@ class Stars extends Component {
     renderStars() {
         const rating = this.props.rating;
         const starSize = this.props.starSize;
-        
+
         let stars = [];
         for(var i =1; i <= starSize; i++){
             let star;
@@ -264,7 +265,7 @@ class Stars extends Component {
             }
            stars.push(star);
         }
-        
+
         return stars;
     }
     render() {
@@ -275,6 +276,81 @@ class Stars extends Component {
         );
     }
 }
+class Projects extends Component {
+  render(){
+    return (
+      <div className="background-baishe">
+      <Grid id="projects">
+          <h2>Projects</h2>
+          <p className="lead">
+           “Knowledge is of no value unless you put it into practice."
+            <br />- Anton Chenkov
+          </p>
+          <hr />
+          <Row style={{
+            marginBottom:"25px"
+          }}>
+              <Col md={5} mdOffset={1} sm={12} >
+                <div className="project-container">
+                  <a href="http://stevenoel-ufo-sightings.surge.sh/">
+                    <Image src="/ufo-sightings-shot.png" height="100%" width="100%" />
+                  </a>
+                  <div className="project-overlay">
+                  </div>
+                  <div className="project-text-container">
+                    <p className="project-title">UFO Sightings</p>
+                    <p className="project-description">Interactive map of UFO sightings. </p>
+                  </div>
+                </div>
+              </Col>
+              <Col md={5} sm={12}>
+                <div className="project-container">
+                  <a href="http://stevenoel-crypto-trakr.surge.sh/">
+                    <Image src="/crypto-trakr-shot.png" height="100%" width="100%" />
+                  </a>
+                  <div className="project-overlay">
+                  </div>
+                  <div className="project-text-container">
+                    <p className="project-title">Crypto Trakr</p>
+                    <p className="project-description">CryptoCurrency App</p>
+                  </div>
+                </div>
+              </Col>
+          </Row>
+          <Row>
+            <Col md={5}  mdOffset={1} sm={12}>
+              <div className="project-container">
+                <a href="http://stevenoel-guitar-tools.surge.sh/">
+                  <Image src="/guitar-tools-shot.png" height="100%" width="100%" />
+                </a>
+                <div className="project-overlay">
+                </div>
+                <div className="project-text-container">
+                  <p className="project-title">Guitar Tools</p>
+                  <p className="project-description">Online Guitar Tools App. Including Tuner,Metronome,Scale Viewer , and Chord Finder.</p>
+                </div>
+              </div>
+            </Col>
+            <Col md={5} sm={12}>
+              <div className="project-container">
+                <a href="http://stevenoel-react-solitaire-project.surge.sh/">
+                  <Image src="/react-solitaire-shot.png" height="100%" width="100%" />
+                </a>
+                <div className="project-overlay">
+                </div>
+                <div className="project-text-container">
+                  <p className="project-title">React Solitaire Game</p>
+                  <p className="project-description">Online Solitaire Game using React and Redux.</p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+      </Grid>
+    </div>
+    );
+  }
+}
+
 class Abilities extends Component {
     render(){
         return (
@@ -289,47 +365,47 @@ class Abilities extends Component {
             <Col md={6}>
             <ul className="no-bullets">
             <li><span className="ability-title">Java</span>
-                <Stars containerClass="ability-score" rating={5} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={5} starSize={5}/>
             </li>
             <li><span className="ability-title">HTML</span>
-                <Stars containerClass="ability-score" rating={5} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={5} starSize={5}/>
             </li>
             <li><span className="ability-title">CSS</span>
-                <Stars containerClass="ability-score" rating={5} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={5} starSize={5}/>
             </li>
             <li><span className="ability-title">SQL</span>
-                <Stars containerClass="ability-score" rating={5} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={5} starSize={5}/>
             </li>
             <li><span className="ability-title">JavaScript</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             <li><span className="ability-title">React Framwork</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             <li><span className="ability-title">Bootstrap Framework</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             </ul>
             </Col>
             <Col md={6}>
             <ul className="no-bullets">
             <li><span className="ability-title">MVC Architecture</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             <li><span className="ability-title">REACT Framework</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             <li><span className="ability-title">AngularJS Framework</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             <li><span className="ability-title">WordPress</span>
-                <Stars containerClass="ability-score" rating={3} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={3} starSize={5}/>
             </li>
             <li><span className="ability-title">OOP Design Patterns</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             <li><span className="ability-title">Command Line</span>
-                <Stars containerClass="ability-score" rating={4} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={4} starSize={5}/>
             </li>
             </ul>
             </Col>
@@ -340,10 +416,10 @@ class Abilities extends Component {
             <Col md={6}>
             <ul className="no-bullets">
             <li><span className="ability-title">English (Native Speaker)</span>
-                <Stars containerClass="ability-score" rating={5} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={5} starSize={5}/>
             </li>
             <li><span className="ability-title">Spanish(Bilingual Proficiency)</span>
-                <Stars containerClass="ability-score" rating={5} starSize={5}/>    
+                <Stars containerClass="ability-score" rating={5} starSize={5}/>
             </li>
             </ul>
             </Col>
@@ -397,13 +473,14 @@ class App extends Component {
     return (
         <div>
         <MyNavBar show={this.state.showNav}/>
-        <Top> 
+        <Top>
         <Waypoint onEnter={this._handleWaypointEnter.bind(this)}
                   onLeave={this._handleWaypointLeave.bind(this)}/>
         </Top>
         <Profile />
         <Experiences />
         <Abilities />
+        <Projects />
         <Contact />
         </div>
     );
